@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let web = WKWebView(frame: webContainerView.frame)
+        let web = WKWebView(frame: webContainerView.bounds)
         webContainerView.addSubview(web)
         webView = web
         
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        webView.frame = webContainerView.frame
+        webView.frame = webContainerView.bounds
     }
     
     @IBAction func tapCapture(sender: UIBarButtonItem) {
